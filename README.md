@@ -45,10 +45,10 @@ Simple Notification Service - SNS (http://aws.amazon.com/sns), so you have visib
 into how your loads are progressing over time.
 
 ## Getting Access to the AWS Lambda Redshift Database Loader
-You can download the AWS Lambda function today from AWSLabs: http://github.com/awslabs/aws-lambda-redshift-loader. For example, perform the following steps to complete local setup:
+You can download the AWS Lambda function today from AWSLabs: http://github.com/Samsung360VR/aws-lambda-redshift-loader. For example, perform the following steps to complete local setup:
 
 ```
-git clone https://github.com/awslabs/aws-lambda-redshift-loader.git
+git clone https://github.com/Samsung360VR/aws-lambda-redshift-loader.git
 cd aws-lambda-redshift-loader
 npm install
 ```
