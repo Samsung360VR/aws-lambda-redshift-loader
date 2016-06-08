@@ -192,9 +192,9 @@ In order to ensure communication with the correct AWS Region, you'll need to set
 an environment variable `AWS_REGION` to the desired location. For example, 
 for US East use `us-east-1`, and for Dublin use `eu-west-1`.
 
-```export AWS_REGION=eu-central-1``` 
+```export AWS_REGION=us-east-1``` 
 
-Next, run the setup.js script by entering node setup.js. The script asks questions 
+Next, run the setup.js script by entering `node setup.js`. The script asks questions 
 about how the load should be done, including those outlined in the setup appendix 
 as the end of this document. 
 
