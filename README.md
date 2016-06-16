@@ -329,6 +329,13 @@ Which would return the batch information as it is stored in Dynamo DB:
 }
 ```
 
+### Reprocessing errored batches
+
+From time to time, there will be failed batches. If you were able to resolve the issue, and want to rerun those batches,
+simply pipe these utilities together. The following example will rerun the last 5 batches. (Running all batches at once may hit throttling of your dynamo table, lambda instances, or redshift capacity.
+
+    node queryBatches.js us-east-1 error | jq .[].batchId | head -n 5 | awk -e '{print "node reprocessBatch.js us-east-1 " $1 " milkvr-analytics-original/csv-rraw1"}' | bash
+
 ## Clearing Processed Files
 We'll only load a file one time by default, but in certain rare cases you might 
 want to re-process a file, such as if a batch goes into error state for some reason. 
